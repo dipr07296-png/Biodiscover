@@ -1,0 +1,20 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/index.py"
+    },
+    {
+      "source": "/(css|js|images|.*\\.html)/(.*)",
+      "destination": "/frontend/$1/$2"
+    },
+    {
+      "source": "/([^/]+\\.(css|js|html|png|jpg|jpeg|gif|svg|ico|json))$",
+      "destination": "/frontend/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/frontend/index.html"
+    }
+  ]
+}
