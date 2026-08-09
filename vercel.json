@@ -1,19 +1,43 @@
 {
   "rewrites": [
     {
-      "source": "/api/(.*)",
+      "source": "/api/:path*",
       "destination": "/api/index.py"
     },
     {
-      "source": "/(css|js|images|.*\\.html)/(.*)",
-      "destination": "/frontend/$1/$2"
+      "source": "/css/:path*",
+      "destination": "/frontend/css/:path*"
     },
     {
-      "source": "/([^/]+\\.(css|js|html|png|jpg|jpeg|gif|svg|ico|json))$",
-      "destination": "/frontend/$1"
+      "source": "/js/:path*",
+      "destination": "/frontend/js/:path*"
     },
     {
-      "source": "/(.*)",
+      "source": "/dashboard.html",
+      "destination": "/frontend/dashboard.html"
+    },
+    {
+      "source": "/molecules.html",
+      "destination": "/frontend/molecules.html"
+    },
+    {
+      "source": "/sequence.html",
+      "destination": "/frontend/sequence.html"
+    },
+    {
+      "source": "/targets.html",
+      "destination": "/frontend/targets.html"
+    },
+    {
+      "source": "/index.html",
+      "destination": "/frontend/index.html"
+    },
+    {
+      "source": "/",
+      "destination": "/frontend/index.html"
+    },
+    {
+      "source": "/:path*",
       "destination": "/frontend/index.html"
     }
   ]
